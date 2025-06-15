@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# env variables
+.env
+.env.*
+
+# build output
+dist/
+build/
+
+# coverage
+coverage/
+
+# debug/logs
+*.log
+
+# IDE specific
+.vscode/
+.idea/
+
+# macOS files
+.DS_Store
+
+# cache files
+.cache/

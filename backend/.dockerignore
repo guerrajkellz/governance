@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Local env files
+.env
+.env.*
+
+# Docker ignore itself
+Dockerfile
+docker-compose.yml
+
+# Git files
+.git
+.gitignore
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store

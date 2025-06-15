@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# build artifacts (Docker will build fresh)
+dist/
+build/
+
+# environment files
+.env
+.env.*
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# coverage and logs
+coverage/
+*.log
+
+# Git metadata
+.git
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Cache
+.cache/
