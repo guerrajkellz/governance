@@ -1,30 +1,47 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import { theme } from './theme.js';
-import Preloader from './components/Preloader.jsx';
-
-import HeaderGlass from './components/HeaderGlass.jsx';   // or Glass/Shrink
-import App from './App.jsx';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider, CssBaseline } from '@mui/material'
+import Preloader from './components/Preloader.jsx'
+import HeaderGlass from './components/HeaderGlass.jsx'
+import App from './App.jsx'
+import { theme } from './theme.js'
+import { AuthProvider } from './auth/AuthProvider.jsx'
+import ProtectedRoute from './auth/ProtectedRoute.jsx'
 
 function Root() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = React.useState(true)
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {loading && <Preloader onDone={() => setLoading(false)} />}
-      {!loading && (
+      {loading ? (
+        <Preloader onDone={() => setLoading(false)} />
+      ) : (
         <>
           <HeaderGlass />
-          <div id="catalog-root">
+          <div id='catalog-root'>
             <App />
           </div>
         </>
       )}
     </ThemeProvider>
-  );
+  )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Root />);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <AuthProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path='/*'
+          element={
+            <ProtectedRoute>
+              <Root />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  </AuthProvider>
+)

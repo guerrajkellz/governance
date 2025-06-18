@@ -47,8 +47,12 @@ export async function callbackHandler(req, res) {
   const saved = req.signedCookies.oidc_state
   res.clearCookie('oidc_state')
 
-  if (state !== saved) return res.status(403).send('Bad state')
-  if (!code) return res.status(400).send('Missing code')
+  if (state !== saved) {
+    return res.status(403).send('Bad state')
+  }
+  if (!code) {
+    return res.status(400).send('Missing code')
+  }
 
   try {
     const body = new URLSearchParams({
@@ -57,7 +61,9 @@ export async function callbackHandler(req, res) {
       redirect_uri: cfg.OIDC_REDIRECT_URI,
       client_id: cfg.OIDC_CLIENT_ID
     })
-    if (cfg.OIDC_CLIENT_SECRET) body.set('client_secret', cfg.OIDC_CLIENT_SECRET)
+    if (cfg.OIDC_CLIENT_SECRET) {
+      body.set('client_secret', cfg.OIDC_CLIENT_SECRET)
+    }
 
     const r = await axios.post(cfg.OIDC_TOKEN_URL, body.toString(), {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }

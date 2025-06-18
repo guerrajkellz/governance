@@ -20,7 +20,9 @@ catalogLines.get('/:line', async (req, res, next) => {
   try {
     const { line } = req.params
     const entry = (await getGroupedCatalog()).find(l => l.line === line)
-    if (!entry) return res.status(404).json({ error: 'Unknown line' })
+    if (!entry) {
+      return res.status(404).json({ error: 'Unknown line' })
+    }
     res.json(entry.products)
   } catch (e) {
     next(e)

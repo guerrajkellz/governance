@@ -10,15 +10,20 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.node, // <-- Adds Node.js globals like `process`, `console`, etc.
+        ...globals.node,
       },
     },
     plugins: { prettier },
     rules: {
       semi: ['error', 'never'],
       quotes: ['error', 'single'],
-      'no-unused-vars': ['warn'],
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // clearly ignores variables prefixed by _
       'prettier/prettier': 'error',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      eqeqeq: ['error', 'always'],
+      curly: ['error', 'all'],
+      'no-implicit-coercion': ['warn'],
+      'prefer-const': ['error'],
     },
   },
 ]

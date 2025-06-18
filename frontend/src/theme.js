@@ -1,9 +1,9 @@
-import { createTheme } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles'
+import { grey } from '@mui/material/colors'
 
 // Google Font “Inter”
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/500.css'
 
 export const theme = createTheme({
   typography: {
@@ -13,4 +13,4 @@ export const theme = createTheme({
     mode: 'light',
     background: { default: grey[50] }
   }
-});
+})

@@ -5,7 +5,9 @@ import { fetchCatalog } from './catalogService.js'
 function group(products) {
   const lines = new Map()
   products.forEach(p => {
-    if (p.lineOfBusinessCode !== 'CCB') return // filter
+    if (p.lineOfBusinessCode !== 'CCB') {
+      return
+    } // filter
     const list = lines.get(p.productLineName) ?? []
     list.push({ productName: p.productName, alias: p.productAppAliasName })
     lines.set(p.productLineName, list)
