@@ -30,8 +30,8 @@ function Root() {
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AuthProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <AuthProvider>
       <Routes>
         <Route
           path='/*'
@@ -42,6 +42,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           }
         />
       </Routes>
-    </BrowserRouter>
-  </AuthProvider>
+    </AuthProvider>
+  </BrowserRouter>
 )

@@ -1,7 +1,7 @@
 // components/HeaderGlass.jsx
 import { AppBar, Box, Toolbar, Typography } from '@mui/material'
 import { motion } from 'framer-motion'
-import logo from '../assets/ccb-governance-logo-black.png'
+import logo from '../assets/cloud-governance-black-new.png'
 
 export default function HeaderGlass() {
   return (

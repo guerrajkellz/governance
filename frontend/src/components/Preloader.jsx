@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import { motion, AnimatePresence } from 'framer-motion'
-import logo from '../assets/ccb-governance-logo.png' // adjust if needed
+import logo from '../assets/ccb-governance-logo-new.png' // adjust if needed
 
 export default function Preloader({ onDone }) {
   const [step, setStep] = useState(0) // 0: logo, 1: GA, 2: CCB, 3: exit
