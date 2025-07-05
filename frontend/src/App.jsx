@@ -1,101 +1,137 @@
-import { useEffect, useState } from 'react'
-import { CssBaseline, Container, IconButton, Typography, Box } from '@mui/material'
-import { DataGrid } from '@mui/x-data-grid'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import { ThemeProvider } from '@mui/material/styles'
-import { theme } from './theme.js'
-import { fetchLines, fetchLineDetails } from './api/catalog.js'
+// frontend/src/App.jsx
+import { useEffect, useState } from 'react';
+import {
+  CssBaseline,
+  Container,
+  IconButton,
+  Typography,
+  Box
+} from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './styles/theme.js';
+import {
+  fetchLines,
+  fetchLineDetails,
+  fetchProductSeals
+} from './api/productCatalog.js';
+
+import ProductLineTable from './tables/ProductLineTable.jsx';
+import ProductTable     from './tables/ProductTable.jsx';
+import SealTable        from './tables/SealTable.jsx';
 
 export default function App() {
-  const [lines, setLines] = useState([])
-  const [products, setProducts] = useState([])
-  const [selectedLine, setSelected] = useState(null)
-  const [loading, setLoading] = useState(false)
+  /* ---------- state ------------------------------------------------ */
+  const [lines, setLines]         = useState([]);
+  const [products, setProducts]   = useState([]);
+  const [seals, setSeals]         = useState([]);
 
+  const [productLine, setProductLine] = useState(null);
+  const [product,     setProduct]     = useState(null);
+
+  const [loading, setLoading] = useState(false);
+
+  /* ---------- first load ------------------------------------------- */
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     fetchLines()
-      .then(data => setLines(data.map((l, idx) => ({ id: idx, ...l }))))
+      .then(data =>
+        setLines(
+          data.map((r, i) => ({
+            id: i,
+            ...r,
+            aliasRatio: `${r.aliasFilled}/${r.aliasTotal}`
+          }))
+        )
+      )
       .catch(console.error)
-      .finally(() => setLoading(false))
-  }, [])
+      .finally(() => setLoading(false));
+  }, []);
 
-  const handleRowClick = async ({ row }) => {
-    setSelected(row.line)
-    setLoading(true)
-    fetchLineDetails(row.line)
-      .then(data => setProducts(data.map((p, idx) => ({ id: idx, ...p }))))
+  /* ---------- handlers --------------------------------------------- */
+  const openProductLine = ({ row }) => {
+    setProductLine(row.productLine);
+    setLoading(true);
+    fetchLineDetails(row.productLine)
+      .then(data => setProducts(data.map((r, i) => ({ id: i, ...r }))))
       .catch(console.error)
-      .finally(() => setLoading(false))
-  }
+      .finally(() => setLoading(false));
+  };
 
-  const back = () => {
-    setSelected(null)
-    setProducts([])
-  }
+  const openProduct = ({ row }) => {
+    setProduct(row.productName);
+    setLoading(true);
+    fetchProductSeals(productLine, row.productName)
+      .then(data => setSeals(data.map((r, i) => ({ id: i, ...r }))))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  };
 
+  const backToLines = () => {
+    setProductLine(null);
+    setProducts([]);
+  };
+  const backToProducts = () => {
+    setProduct(null);
+    setSeals([]);
+  };
+
+  /* ---------- render ------------------------------------------------ */
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth='md' sx={{ py: 4 }}>
-        {!selectedLine ? (
+      <Container maxWidth="md" sx={{ py: 4 }}>
+        {/* LEVEL 1 */}
+        {!productLine && (
           <>
-            <Typography variant='h4' gutterBottom>
+            <Typography variant="h4" gutterBottom>
               CCB Product Lines
             </Typography>
-            <DataGrid
-              autoHeight
-              density='compact'
+            <ProductLineTable
               rows={lines}
-              columns={[
-                { field: 'line', headerName: 'Product Line', flex: 2 },
-                { field: 'count', headerName: '# of Aliases', flex: 1, type: 'number' }
-              ]}
-              pageSizeOptions={[10]}
-              disableRowSelectionOnClick
-              onRowClick={handleRowClick}
               loading={loading}
-              showCellVerticalBorder
-              showColumnVerticalBorder
-              sx={{
-                '& .MuiDataGrid-columnHeaders': {
-                  backgroundColor: 'rgba(0,0,0,0.05)',
-                  borderBottom: '1px solid #ddd'
-                },
-                '& .MuiDataGrid-cell': {
-                  borderBottom: '1px solid #f0f0f0'
-                },
-                '& .MuiDataGrid-cell[data-field="line"]:hover': {
-                  cursor: 'pointer',
-                  textDecoration: 'underline'
-                }
-              }}
+              onRowClick={openProductLine}
             />
           </>
-        ) : (
+        )}
+
+        {/* LEVEL 2 */}
+        {productLine && !product && (
           <>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-              <IconButton onClick={back}>
+              <IconButton onClick={backToLines}>
                 <ArrowBackIcon />
               </IconButton>
-              <Typography variant='h5' sx={{ ml: 1 }}>
-                {selectedLine}
+              <Typography variant="h5" sx={{ ml: 1 }}>
+                {productLine}
               </Typography>
             </Box>
-            <DataGrid
-              autoHeight
-              density='compact'
+            <ProductTable
               rows={products}
-              columns={[
-                { field: 'productName', headerName: 'Product', flex: 2 },
-                { field: 'alias', headerName: 'Alias', flex: 1 }
-              ]}
-              pageSizeOptions={[10]}
               loading={loading}
+              onRowClick={openProduct}
             />
+          </>
+        )}
+
+        {/* LEVEL 3 */}
+        {product && (
+          <>
+            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+              <IconButton onClick={backToProducts}>
+                <ArrowBackIcon />
+              </IconButton>
+              <Typography variant="h5" sx={{ ml: 1 }}>
+                {product}
+              </Typography>
+            </Box>
+            <SealTable rows={seals} loading={loading} />
           </>
         )}
       </Container>
     </ThemeProvider>
-  )
+  );
 }
+
+
+

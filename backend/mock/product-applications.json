@@ -1,0 +1,179 @@
+{
+  "productApplications": [
+    { "productIdentifier": "2516", "lineOfBusinessCode": "CCB",
+      "productLineName": "Card", "productName": "Card Authorizations",
+      "applications": [ { "applicationIdentifier": "112299",
+                          "applicationSystemComponentName": "Card Auth Core" } ] },
+
+    { "productIdentifier": "2517", "lineOfBusinessCode": "CCB",
+      "productLineName": "Card", "productName": "Card Disputes",
+      "applications": [ { "applicationIdentifier": "112400",
+                          "applicationSystemComponentName": "Dispute Engine" } ] },
+
+    { "productIdentifier": "2700", "lineOfBusinessCode": "CCB",
+      "productLineName": "Connected Commerce", "productName": "Lending Innovation 0",
+      "applications": [ { "applicationIdentifier": "120000",
+                          "applicationSystemComponentName": "Lending L0 Orchestrator" } ] },
+
+    { "productIdentifier": "2701", "lineOfBusinessCode": "CCB",
+      "productLineName": "Connected Commerce", "productName": "Lending Innovation 1",
+      "applications": [ { "applicationIdentifier": "120001",
+                          "applicationSystemComponentName": "Lending L1 Orchestrator" } ] },
+
+    { "productIdentifier": "3001", "lineOfBusinessCode": "CCB",
+      "productLineName": "Checking Accounts", "productName": "Everyday Checking",
+      "applications": [ { "applicationIdentifier": "130001",
+                          "applicationSystemComponentName": "DDA Core" } ] },
+
+    { "productIdentifier": "3002", "lineOfBusinessCode": "CCB",
+      "productLineName": "Checking Accounts", "productName": "Student Checking",
+      "applications": [ { "applicationIdentifier": "130002",
+                          "applicationSystemComponentName": "Student DDA Core" } ] },
+
+    { "productIdentifier": "3050", "lineOfBusinessCode": "CCB",
+      "productLineName": "Savings Accounts", "productName": "High‑Yield Savings",
+      "applications": [ { "applicationIdentifier": "130003",
+                          "applicationSystemComponentName": "HYS Rate Engine" } ] },
+
+    { "productIdentifier": "3051", "lineOfBusinessCode": "CCB",
+      "productLineName": "Savings Accounts", "productName": "Holiday Club Savings",
+      "applications": [ { "applicationIdentifier": "130004",
+                          "applicationSystemComponentName": "Holiday Scheduler" } ] },
+
+    { "productIdentifier": "4120", "lineOfBusinessCode": "CCB",
+      "productLineName": "Credit Cards", "productName": "Platinum Rewards Card",
+      "applications": [ { "applicationIdentifier": "140001",
+                          "applicationSystemComponentName": "Rewards Calculator" } ] },
+
+    { "productIdentifier": "4121", "lineOfBusinessCode": "CCB",
+      "productLineName": "Credit Cards", "productName": "Secured Builder Card",
+      "applications": [ { "applicationIdentifier": "140002",
+                          "applicationSystemComponentName": "Secured Ledger" } ] },
+
+    { "productIdentifier": "4201", "lineOfBusinessCode": "CCB",
+      "productLineName": "Personal Loans", "productName": "Debt‑Consolidation Loan",
+      "applications": [ { "applicationIdentifier": "150001",
+                          "applicationSystemComponentName": "DCL Processor" } ] },
+
+    { "productIdentifier": "4202", "lineOfBusinessCode": "CCB",
+      "productLineName": "Personal Loans", "productName": "Home Improvement Loan",
+      "applications": [ { "applicationIdentifier": "150002",
+                          "applicationSystemComponentName": "Renovation Loan Core" } ] },
+
+    { "productIdentifier": "4301", "lineOfBusinessCode": "CCB",
+      "productLineName": "Auto Loans", "productName": "New‑Car Loan",
+      "applications": [ { "applicationIdentifier": "160001",
+                          "applicationSystemComponentName": "Auto Origination" } ] },
+
+    { "productIdentifier": "4302", "lineOfBusinessCode": "CCB",
+      "productLineName": "Auto Loans", "productName": "Refinance‑Car Loan",
+      "applications": [ { "applicationIdentifier": "160002",
+                          "applicationSystemComponentName": "Auto Refi Core" } ] },
+
+    { "productIdentifier": "4401", "lineOfBusinessCode": "CCB",
+      "productLineName": "Mortgages", "productName": "30‑Year Fixed",
+      "applications": [ { "applicationIdentifier": "170001",
+                          "applicationSystemComponentName": "Mortgage 30 Engine" } ] },
+
+    { "productIdentifier": "4402", "lineOfBusinessCode": "CCB",
+      "productLineName": "Mortgages", "productName": "15‑Year Fixed",
+      "applications": [ { "applicationIdentifier": "170002",
+                          "applicationSystemComponentName": "Mortgage 15 Engine" } ] },
+
+    { "productIdentifier": "4501", "lineOfBusinessCode": "CCB",
+      "productLineName": "Home Equity", "productName": "HELOC Flex",
+      "applications": [ { "applicationIdentifier": "180001",
+                          "applicationSystemComponentName": "HELOC Servicing" } ] },
+
+    { "productIdentifier": "4502", "lineOfBusinessCode": "CCB",
+      "productLineName": "Home Equity", "productName": "Home Equity Loan",
+      "applications": [ { "applicationIdentifier": "180002",
+                          "applicationSystemComponentName": "HE Loan Core" } ] },
+
+    { "productIdentifier": "4601", "lineOfBusinessCode": "CCB",
+      "productLineName": "Investments", "productName": "Self‑Directed Brokerage",
+      "applications": [ { "applicationIdentifier": "190001",
+                          "applicationSystemComponentName": "Brokerage OMS" } ] },
+
+    { "productIdentifier": "4602", "lineOfBusinessCode": "CCB",
+      "productLineName": "Investments", "productName": "Managed Portfolios",
+      "applications": [ { "applicationIdentifier": "190002",
+                          "applicationSystemComponentName": "Robo‑Advisor Core" } ] },
+
+
+    { "productIdentifier": "4701", "lineOfBusinessCode": "CCB",
+      "productLineName": "Insurance", "productName": "Auto Insurance",
+      "applications": [ { "applicationIdentifier": "200001",
+                          "applicationSystemComponentName": "Auto Policy Admin" } ] },
+
+    { "productIdentifier": "4702", "lineOfBusinessCode": "CCB",
+      "productLineName": "Insurance", "productName": "Homeowners Insurance",
+      "applications": [ { "applicationIdentifier": "200002",
+                          "applicationSystemComponentName": "Home Policy Admin" } ] },
+
+
+    { "productIdentifier": "4801", "lineOfBusinessCode": "CCB",
+      "productLineName": "Mobile Banking", "productName": "Zelle Transfers",
+      "applications": [ { "applicationIdentifier": "210001",
+                          "applicationSystemComponentName": "Zelle Gateway" } ] },
+
+    { "productIdentifier": "4802", "lineOfBusinessCode": "CCB",
+      "productLineName": "Mobile Banking", "productName": "Mobile Check Deposit",
+      "applications": [ { "applicationIdentifier": "210002",
+                          "applicationSystemComponentName": "MCD Processor" } ] },
+
+    { "productIdentifier": "4901", "lineOfBusinessCode": "CCB",
+      "productLineName": "Fraud & Security", "productName": "Card Lock",
+      "applications": [ { "applicationIdentifier": "220001",
+                          "applicationSystemComponentName": "Lock Service" } ] },
+
+    { "productIdentifier": "4902", "lineOfBusinessCode": "CCB",
+      "productLineName": "Fraud & Security", "productName": "Two‑Factor Auth",
+      "applications": [ { "applicationIdentifier": "220002",
+                          "applicationSystemComponentName": "2FA Gateway" } ] },
+
+
+    { "productIdentifier": "5001", "lineOfBusinessCode": "CCB",
+      "productLineName": "Rewards & Loyalty", "productName": "Cash‑Back Boost",
+      "applications": [ { "applicationIdentifier": "230001",
+                          "applicationSystemComponentName": "Cashback Engine" } ] },
+
+    { "productIdentifier": "5002", "lineOfBusinessCode": "CCB",
+      "productLineName": "Rewards & Loyalty", "productName": "Travel Miles+",
+      "applications": [ { "applicationIdentifier": "230002",
+                          "applicationSystemComponentName": "Miles Engine" } ] },
+
+
+    { "productIdentifier": "5101", "lineOfBusinessCode": "CCB",
+      "productLineName": "Wealth Management", "productName": "Private Client Checking",
+      "applications": [ { "applicationIdentifier": "240001",
+                          "applicationSystemComponentName": "PCC Core" } ] },
+
+    { "productIdentifier": "5102", "lineOfBusinessCode": "CCB",
+      "productLineName": "Wealth Management", "productName": "Family Office Services",
+      "applications": [ { "applicationIdentifier": "240002",
+                          "applicationSystemComponentName": "Family Office Hub" } ] },
+
+
+    { "productIdentifier": "5201", "lineOfBusinessCode": "CCB",
+      "productLineName": "Payments & Transfers", "productName": "Wire Transfers",
+      "applications": [ { "applicationIdentifier": "250001",
+                          "applicationSystemComponentName": "Wire Hub" } ] },
+
+    { "productIdentifier": "5202", "lineOfBusinessCode": "CCB",
+      "productLineName": "Payments & Transfers", "productName": "External ACH",
+      "applications": [ { "applicationIdentifier": "250002",
+                          "applicationSystemComponentName": "ACH Hub" } ] },
+
+
+    { "productIdentifier": "5301", "lineOfBusinessCode": "CCB",
+      "productLineName": "Student Banking", "productName": "Campus Card",
+      "applications": [ { "applicationIdentifier": "260001",
+                          "applicationSystemComponentName": "Campus Card Core" } ] },
+
+    { "productIdentifier": "5302", "lineOfBusinessCode": "CCB",
+      "productLineName": "Student Banking", "productName": "Starter Savings",
+      "applications": [ { "applicationIdentifier": "260002",
+                          "applicationSystemComponentName": "Youth Savings Core" } ] }
+  ]
+}

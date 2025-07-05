@@ -1,3 +1,5 @@
+// frontend/src/auth/AuthProvider.jsx
+
 import React, { createContext, useState, useEffect, useCallback, useRef } from 'react'
 import { jwtDecode } from 'jwt-decode'
 import { useNavigate, useLocation } from 'react-router-dom'

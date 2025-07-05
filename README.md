@@ -1,306 +1,173 @@
-Soo.. This is what I would like to do below is my mock/product-catalog.json that you created for me..
+# Governance Architecture Cost ‑  Demo
+
+A full-stack reference implementation demonstrating how users can understand and visualize their journey to , guided by clear governance rules through a Node.js Express backend and a React + Vite frontend.
+
+---
+
+## 📁 Project layout
+
+governance/
+├── .prettierrc.json # Shared Prettier config
+├── eslint.config.js # Unified ESLint config
+├── package.json # Root scripts & dependencies
+│
+├── backend/ # Node.js Express REST API
+│ ├── server.js
+│ ├── config/ # Environment & runtime config
+│ ├── auth/ # OIDC setup & middleware
+│ ├── api/
+│ │ └── productCatalog/
+│ │ ├── data/ # Fetch & group catalog data
+│ │ └── routes/ # API endpoints
+│ ├── apiTokens/ # Token helpers for APIs
+│ ├── utils/ # Helper utilities
+│ └── mock/ # JSON mocks for local dev
+│
+└── frontend/ # React + Vite client app
+├── index.html
+├── src/
+│ ├── api/ # API integration
+│ ├── auth/ # Auth context & hooks
+│ ├── components/ # UI components
+│ ├── pages/ # Application pages
+│ ├── assets/ # Static images
+│ └── styles/ # Theme and styling
+└── vite.config.js
 
 
-{
-    "productSummary": [
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Card",
-        "productName": "Card Authorizations",
-        "productDescriptionText": "Point‑of‑sale card transactions (auth & capture)",
-        "productAppAliasName": "card-auth"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Card",
-        "productName": "Card Disputes",
-        "productDescriptionText": "Customer dispute intake & resolution",
-        "productAppAliasName": "card-disputes"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Connected Commerce",
-        "productName": "Lending Innovation 0",
-        "productDescriptionText": "Omni‑channel lending orchestration",
-        "productAppAliasName": "lending-innovation-0"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Connected Commerce",
-        "productName": "Lending Innovation 1",
-        "productDescriptionText": "Next‑gen BNPL decision engine",
-        "productAppAliasName": "lending-innovation-1"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Checking Accounts",
-        "productName": "Everyday Checking",
-        "productDescriptionText": "Standard demand‑deposit account",
-        "productAppAliasName": "everyday-checking"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Checking Accounts",
-        "productName": "Student Checking",
-        "productDescriptionText": "Fee‑friendly account for students",
-        "productAppAliasName": "student-checking"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Savings Accounts",
-        "productName": "High‑Yield Savings",
-        "productDescriptionText": "Variable‑rate, FDIC‑insured savings",
-        "productAppAliasName": "high-yield-savings"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Savings Accounts",
-        "productName": "Holiday Club Savings",
-        "productDescriptionText": "Seasonal goal‑based savings",
-        "productAppAliasName": "holiday-club"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Credit Cards",
-        "productName": "Platinum Rewards Card",
-        "productDescriptionText": "Cash‑back on everyday spend",
-        "productAppAliasName": "platinum-rewards"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Credit Cards",
-        "productName": "Secured Builder Card",
-        "productDescriptionText": "Credit‑building secured card",
-        "productAppAliasName": "secured-builder"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Personal Loans",
-        "productName": "Debt‑Consolidation Loan",
-        "productDescriptionText": "Fixed‑rate consolidation",
-        "productAppAliasName": "debt-consolidation"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Personal Loans",
-        "productName": "Home Improvement Loan",
-        "productDescriptionText": "Unsecured renovation financing",
-        "productAppAliasName": "home-improvement-loan"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Auto Loans",
-        "productName": "New‑Car Loan",
-        "productDescriptionText": "Purchase financing for new vehicles",
-        "productAppAliasName": "new-car-loan"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Auto Loans",
-        "productName": "Refinance‑Car Loan",
-        "productDescriptionText": "Rate‑reduction auto refi",
-        "productAppAliasName": "refi-car-loan"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Mortgages",
-        "productName": "30‑Year Fixed",
-        "productDescriptionText": "Conforming fixed‑rate mortgage",
-        "productAppAliasName": "mortgage-30-fixed"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Mortgages",
-        "productName": "15‑Year Fixed",
-        "productDescriptionText": "Accelerated amortization mortgage",
-        "productAppAliasName": "mortgage-15-fixed"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Home Equity",
-        "productName": "HELOC Flex",
-        "productDescriptionText": "Revolving home‑equity credit line",
-        "productAppAliasName": "heloc-flex"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Home Equity",
-        "productName": "Home Equity Loan",
-        "productDescriptionText": "Fixed lump‑sum HE Loan",
-        "productAppAliasName": "home-equity-loan"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Investments",
-        "productName": "Self‑Directed Brokerage",
-        "productDescriptionText": "DIY equities & ETFs platform",
-        "productAppAliasName": "brokerage"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Investments",
-        "productName": "Managed Portfolios",
-        "productDescriptionText": "Automated ETF portfolios",
-        "productAppAliasName": "managed-portfolios"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Insurance",
-        "productName": "Auto Insurance",
-        "productDescriptionText": "Personal vehicle coverage",
-        "productAppAliasName": "auto-insurance"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Insurance",
-        "productName": "Homeowners Insurance",
-        "productDescriptionText": "Property & casualty coverage",
-        "productAppAliasName": "homeowners-ins"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Mobile Banking",
-        "productName": "Zelle Transfers",
-        "productDescriptionText": "Real‑time P2P payments",
-        "productAppAliasName": "zelle-transfers"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Mobile Banking",
-        "productName": "Mobile Check Deposit",
-        "productDescriptionText": "Scan & deposit checks via app",
-        "productAppAliasName": "mobile-deposit"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Fraud & Security",
-        "productName": "Card Lock",
-        "productDescriptionText": "Instantly lock/unlock card",
-        "productAppAliasName": "card-lock"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Fraud & Security",
-        "productName": "Two‑Factor Auth",
-        "productDescriptionText": "Out‑of‑band authentication service",
-        "productAppAliasName": "two-factor-auth"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Rewards & Loyalty",
-        "productName": "Cash‑Back Boost",
-        "productDescriptionText": "Rotating category cash‑back",
-        "productAppAliasName": "cashback-boost"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Rewards & Loyalty",
-        "productName": "Travel Miles+",
-        "productDescriptionText": "Premium miles accelerator",
-        "productAppAliasName": "travel-miles-plus"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Wealth Management",
-        "productName": "Private Client Checking",
-        "productDescriptionText": "Relationship‑based DDA for HNWIs",
-        "productAppAliasName": "private-checking"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Wealth Management",
-        "productName": "Family Office Services",
-        "productDescriptionText": "Consolidated multigenerational services",
-        "productAppAliasName": "family-office-services"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Payments & Transfers",
-        "productName": "Wire Transfers",
-        "productDescriptionText": "Domestic & international wires",
-        "productAppAliasName": "wire-transfers"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Payments & Transfers",
-        "productName": "External ACH",
-        "productDescriptionText": "Outbound ACH origination",
-        "productAppAliasName": "external-ach"
-      },
-  
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Student Banking",
-        "productName": "Campus Card",
-        "productDescriptionText": "University‑branded debit card",
-        "productAppAliasName": "campus-card"
-      },
-      {
-        "lineOfBusinessName": "Consumer & Community Banking",
-        "lineOfBusinessCode": "CCB",
-        "productLineName": "Student Banking",
-        "productName": "Starter Savings",
-        "productDescriptionText": "Goal‑based youth savings",
-        "productAppAliasName": "starter-savings"
-      }
-    ],
-    "page": { "moreRecordsIndicator": false }
-  }
-  
-I need to be able to create 
+---
 
-1. A table where first column displays all Product Lines
-2. I want the second column to display Product Alias Count within the product line
-3. When you click the specific Product Line it will
-a. show a new table (replace the old one) and show the Products within that product line in the first Column
-b. The second colum will show the product alias of name of that product
 
-I want to use sophisticated react library. and beautufyl fonts etc... This has to look very modern and innovative. Pick the best libraries we have for this please
+---
+
+## 🔑 Environment Variables
+
+Copy the example environment file and configure it:
+
+```bash
+
+Fill in the .env file with appropriate values:
+
+| Variable       | Example Value                                                        | Purpose                                  |
+| -------------- | -------------------------------------------------------------------- | ---------------------------------------- |
+| NODE\_ENV      | development                                                          | Node runtime mode (development/prod)     |
+| USE\_MOCK      | true                                                                 | `true`: use mock data, `false`: live API |
+| AUTH\_ENABLED  | false                                                                | Enable authentication middleware         |
+| PORT           | 3000                                                                 | Port for backend server                  |
+| COOKIE\_SECRET | changeme-dev-secret                                                  | Secret for signing cookies               |
+| TOKEN\_URL     | [https://auth.server/oauth2/token](https://auth.server/oauth2/token) | URL for obtaining external API token     |
+| BASE\_API\_URL | [https://catalog.server/endpoint](https://catalog.server/endpoint)   | Product catalog API endpoint             |
+| CLIENT\_ID     | your-client-id                                                       | API client ID                            |
+| USERNAME       | your-username                                                        | API username/service account             |
+| PASSWORD       | your-password                                                        | API password                             |
+| RESOURCE       | (optional)                                                           | API resource identifier                  |
+| GRANT\_TYPE    | password                                                             | OAuth grant type                         |
+| TRACE\_ID      | local-trace                                                          | API tracing ID (dev only)                |
+| CHANNEL\_TYPE  | local-channel                                                        | API channel type (dev only)              |
+| REQUEST\_COUNT | 100                                                                  | Pagination size for API requests         |
+
+
+| Variable             | Example Value                                                                                | Purpose                  |
+| -------------------- | -------------------------------------------------------------------------------------------- | ------------------------ |
+| OIDC\_ISSUER         | [https://id.example.com](https://id.example.com)                                             | OIDC issuer URL          |
+| OIDC\_AUDIENCE       | api://catalog                                                                                | OIDC audience            |
+| OIDC\_CLIENT\_ID     | example-spa                                                                                  | OIDC client ID           |
+| OIDC\_CLIENT\_SECRET | (public SPA - leave empty)                                                                   | OIDC client secret       |
+| OIDC\_SCOPE          | openid profile email                                                                         | OIDC scope               |
+| OIDC\_REDIRECT\_URI  | [http://localhost:3000/oidc/cb](http://localhost:3000/oidc/cb)                               | Callback URL             |
+| OIDC\_JWKS\_URI      | [https://id.example.com/.well-known/jwks.json](https://id.example.com/.well-known/jwks.json) | JWKS URL                 |
+| OIDC\_AUTHORIZE\_URL | [https://id.example.com/authorize](https://id.example.com/authorize)                         | Authorization URL        |
+| OIDC\_TOKEN\_URL     | [https://id.example.com/oauth/token](https://id.example.com/oauth/token)                     | Token endpoint           |
+| OIDC\_RESOURCE       | (optional)                                                                                   | OIDC resource identifier |
+
+---
+
+```
+
+## 🚀 Project Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/your-org/governance.git
+cd governance
+```
+
+### 2. Install Dependencies
+
+#### Backend
+
+```bash
+cd backend
+npm install
+```
+
+#### Frontend
+
+```bash
+cd ../frontend
+npm install
+```
+
+### 3. Run Applications
+
+Run these commands in separate terminals:
+
+#### Backend
+
+```bash
+cd backend
+npm run dev
+```
+
+#### Frontend
+
+```bash
+cd frontend
+npm run dev
+
+```
+
+Your apps should now be running at http://localhost:3000/
+
+
+---
+
+## ✅ Before Committing
+
+Make sure you're in the **root directory** (`governance/`) of your project before running these commands.
+
+### Install Development Dependencies (ESLint & Prettier)
+
+Before you run linting and formatting commands, ensure ESLint and Prettier dependencies are installed by running:
+
+```bash
+npm install
+```
+
+This will install all necessary dependencies defined in your package.json, including ESLint and Prettier.
+
+#### Lint and Auto-fix
+
+```bash
+npm run lint
+```
+
+#### Format Code
+
+```bash
+npm run format
+```
+
+#### Recommended Commit Workflow
+
+```bash
+npm run lint && npm run format
+```
+
+After successful completion, you're ready to commit your changes!
+
+
+
+
+

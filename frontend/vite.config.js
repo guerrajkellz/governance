@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api-data': 'http://localhost:3000'
+      '/api-data/catalog': 'http://localhost:3000'
     }
   }
 })

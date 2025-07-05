@@ -1,3 +1,4 @@
+// auth/token.js
 export function getAccessToken() {
   try {
     const raw = sessionStorage.getItem('authData')

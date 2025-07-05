@@ -2,10 +2,10 @@
     "name": "product-catalog-backend",
     "type": "module",
     "scripts": {
-        "dev": "nodemon src/server.js",
-        "start": "node src/server.js",
+        "dev": "nodemon server.js",
+        "start": "node server.js",
         "lint": "eslint . --ext .js --fix",
-        "format": "prettier --write \"src/**/*.js\""
+        "format": "prettier --write \"./**/*.js\""
     },
     "dependencies": {
         "axios": "^1.7.2",
@@ -13,6 +13,7 @@
         "dotenv": "^16.4.5",
         "express": "^4.19.3",
         "jose": "^5.4.3",
+        "lru-cache": "^11.1.0",
         "qs": "^6.12.0"
     },
     "devDependencies": {

@@ -1,0 +1,294 @@
+{
+    "productSummary": [
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Card",
+        "productName": "Card Authorizations",
+        "productDescriptionText": "Point‑of‑sale card transactions (auth & capture)",
+        "productAppAliasName": "card-auth"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Card",
+        "productName": "Card Disputes",
+        "productDescriptionText": "Customer dispute intake & resolution",
+        "productAppAliasName": "card-disputes"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Connected Commerce",
+        "productName": "Lending Innovation 0",
+        "productDescriptionText": "Omni‑channel lending orchestration",
+        "productAppAliasName": ""
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Connected Commerce",
+        "productName": "Lending Innovation 1",
+        "productDescriptionText": "Next‑gen BNPL decision engine",
+        "productAppAliasName": "lending-innovation-1"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Checking Accounts",
+        "productName": "Everyday Checking",
+        "productDescriptionText": "Standard demand‑deposit account",
+        "productAppAliasName": "everyday-checking"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Checking Accounts",
+        "productName": "Student Checking",
+        "productDescriptionText": "Fee‑friendly account for students",
+        "productAppAliasName": "student-checking"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Savings Accounts",
+        "productName": "High‑Yield Savings",
+        "productDescriptionText": "Variable‑rate, FDIC‑insured savings",
+        "productAppAliasName": "high-yield-savings"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Savings Accounts",
+        "productName": "Holiday Club Savings",
+        "productDescriptionText": "Seasonal goal‑based savings",
+        "productAppAliasName": "holiday-club"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Credit Cards",
+        "productName": "Platinum Rewards Card",
+        "productDescriptionText": "Cash‑back on everyday spend",
+        "productAppAliasName": "platinum-rewards"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Credit Cards",
+        "productName": "Secured Builder Card",
+        "productDescriptionText": "Credit‑building secured card",
+        "productAppAliasName": "secured-builder"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Personal Loans",
+        "productName": "Debt‑Consolidation Loan",
+        "productDescriptionText": "Fixed‑rate consolidation",
+        "productAppAliasName": "debt-consolidation"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Personal Loans",
+        "productName": "Home Improvement Loan",
+        "productDescriptionText": "Unsecured renovation financing",
+        "productAppAliasName": "home-improvement-loan"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Auto Loans",
+        "productName": "New‑Car Loan",
+        "productDescriptionText": "Purchase financing for new vehicles",
+        "productAppAliasName": "new-car-loan"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Auto Loans",
+        "productName": "Refinance‑Car Loan",
+        "productDescriptionText": "Rate‑reduction auto refi",
+        "productAppAliasName": "refi-car-loan"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Mortgages",
+        "productName": "30‑Year Fixed",
+        "productDescriptionText": "Conforming fixed‑rate mortgage",
+        "productAppAliasName": "mortgage-30-fixed"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Mortgages",
+        "productName": "15‑Year Fixed",
+        "productDescriptionText": "Accelerated amortization mortgage",
+        "productAppAliasName": "mortgage-15-fixed"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Home Equity",
+        "productName": "HELOC Flex",
+        "productDescriptionText": "Revolving home‑equity credit line",
+        "productAppAliasName": "heloc-flex"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Home Equity",
+        "productName": "Home Equity Loan",
+        "productDescriptionText": "Fixed lump‑sum HE Loan",
+        "productAppAliasName": "home-equity-loan"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Investments",
+        "productName": "Self‑Directed Brokerage",
+        "productDescriptionText": "DIY equities & ETFs platform",
+        "productAppAliasName": "brokerage"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Investments",
+        "productName": "Managed Portfolios",
+        "productDescriptionText": "Automated ETF portfolios",
+        "productAppAliasName": "managed-portfolios"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Insurance",
+        "productName": "Auto Insurance",
+        "productDescriptionText": "Personal vehicle coverage",
+        "productAppAliasName": "auto-insurance"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Insurance",
+        "productName": "Homeowners Insurance",
+        "productDescriptionText": "Property & casualty coverage",
+        "productAppAliasName": "homeowners-ins"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Mobile Banking",
+        "productName": "Zelle Transfers",
+        "productDescriptionText": "Real‑time P2P payments",
+        "productAppAliasName": "zelle-transfers"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Mobile Banking",
+        "productName": "Mobile Check Deposit",
+        "productDescriptionText": "Scan & deposit checks via app",
+        "productAppAliasName": "mobile-deposit"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Fraud & Security",
+        "productName": "Card Lock",
+        "productDescriptionText": "Instantly lock/unlock card",
+        "productAppAliasName": "card-lock"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Fraud & Security",
+        "productName": "Two‑Factor Auth",
+        "productDescriptionText": "Out‑of‑band authentication service",
+        "productAppAliasName": "two-factor-auth"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Rewards & Loyalty",
+        "productName": "Cash‑Back Boost",
+        "productDescriptionText": "Rotating category cash‑back",
+        "productAppAliasName": "cashback-boost"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Rewards & Loyalty",
+        "productName": "Travel Miles+",
+        "productDescriptionText": "Premium miles accelerator",
+        "productAppAliasName": "travel-miles-plus"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Wealth Management",
+        "productName": "Private Client Checking",
+        "productDescriptionText": "Relationship‑based DDA for HNWIs",
+        "productAppAliasName": "private-checking"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Wealth Management",
+        "productName": "Family Office Services",
+        "productDescriptionText": "Consolidated multigenerational services",
+        "productAppAliasName": "family-office-services"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Payments & Transfers",
+        "productName": "Wire Transfers",
+        "productDescriptionText": "Domestic & international wires",
+        "productAppAliasName": "wire-transfers"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Payments & Transfers",
+        "productName": "External ACH",
+        "productDescriptionText": "Outbound ACH origination",
+        "productAppAliasName": "external-ach"
+      },
+  
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Student Banking",
+        "productName": "Campus Card",
+        "productDescriptionText": "University‑branded debit card",
+        "productAppAliasName": "campus-card"
+      },
+      {
+        "lineOfBusinessName": "Consumer & Community Banking",
+        "lineOfBusinessCode": "CCB",
+        "productLineName": "Student Banking",
+        "productName": "Starter Savings",
+        "productDescriptionText": "Goal‑based youth savings",
+        "productAppAliasName": "starter-savings"
+      }
+    ],
+    "page": { "moreRecordsIndicator": false }
+  }
+  

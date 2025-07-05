@@ -1,11 +1,12 @@
+// frontend/src/main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider, CssBaseline } from '@mui/material'
-import Preloader from './components/Preloader.jsx'
-import HeaderGlass from './components/HeaderGlass.jsx'
+import Preloader from './components/common/Preloader.jsx'
+import HeaderGlass from './components/layout/HeaderGlass.jsx'
 import App from './App.jsx'
-import { theme } from './theme.js'
+import { theme } from './styles/theme.js'
 import { AuthProvider } from './auth/AuthProvider.jsx'
 import ProtectedRoute from './auth/ProtectedRoute.jsx'
 
